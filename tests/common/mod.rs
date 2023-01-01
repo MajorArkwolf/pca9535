@@ -57,7 +57,7 @@ pub struct RpiGPIO {
 pub struct Pca9535GPIO<'a, T, I2C, E>
 where
     T: SyncExpander<I2C>,
-    I2C: HalI2c<Error = E>,
+    I2C: HalI2c,
 {
     pub _in0_3: ExpanderInputPin<'a, I2C, T, E>,
     pub in0_4: ExpanderInputPin<'a, I2C, T, E>,
